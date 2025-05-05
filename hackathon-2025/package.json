@@ -13,7 +13,7 @@
     "dev": "nodemon src/cli.ts",
     "start": "node dist/cli.js",
     "prepublishOnly": "pnpm build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-tool": "pnpm build && node dist/cli.js -i https://dev.surveyapi.59club.studiographene.xyz/api/api-docs.json -o test-output/client.ts"
   },
   "keywords": [
     "api",
