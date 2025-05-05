@@ -1,0 +1,42 @@
+{
+  "name": "api-client-generator",
+  "version": "0.0.1",
+  "description": "Generates type-safe API client code from OpenAPI specs",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "generate-api-client": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "dev": "nodemon src/cli.ts",
+    "start": "node dist/cli.js",
+    "prepublishOnly": "pnpm build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "client",
+    "generator",
+    "typescript",
+    "openapi"
+  ],
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/commander": "^2.12.5",
+    "@types/node": "^22.15.3",
+    "nodemon": "^3.1.10",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "json-schema-to-typescript": "^15.0.4"
+  }
+}
